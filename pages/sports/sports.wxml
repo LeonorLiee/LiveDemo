@@ -1,0 +1,8 @@
+<import src="live-item/live-item-template.wxml" />
+<view class='container'>
+  <block wx:for="{{live_key}}" wx:for-item="item" wx:for-index="index">
+    <view catchtap="onLiveTap" data-live-id="{{item.sid}}">
+      <template is="liveItem" data="{{...item}}" />
+    </view>
+  </block>
+</view>

@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/sports/sports",
+    "pages/sports/live-detail/live-detail",
+    "pages/technologies/technology"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#6f60aa",
+    "backgroundColor":"white",
+    "enablePullDownRefresh0":true
+  },
+  "tabBar": {
+    "color":"#867892",
+    "selectedColor":"#6950a1",
+    "backgroundColor":"#afb4db",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/sports/sports",
+        "text": "体育yo~"
+      },
+      {
+        "pagePath": "pages/technologies/technology",
+        "text": "科技yo~"
+      }
+    ]
+  }
+}

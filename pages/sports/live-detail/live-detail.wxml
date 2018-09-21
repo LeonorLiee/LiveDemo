@@ -1,0 +1,48 @@
+<view class="page-box" style="background: url(/image/detail-img/bg.png);">
+  <view class="video-box" style="height:{{pulling?'100%':'calc(100%)'}};">
+    <live-player
+      id="livePlayer"
+      class="video"
+      src="{{src}}"
+      mode="{{mode}}"
+      muted="{{muted}}"
+      orientation="{{orientation}}"
+      object-fit="{{objectFit}}"
+      bindstatechange="statechange"
+      bindfullscreenchange="fullscreenchange"
+      bindnetstatus="netstatus"
+      binderror="error"
+    >
+      <image
+        hidden="{{pulling}}"
+        class="video coverImg"
+        src="../../../../image/detail-img/bg.png"
+        background-size="cover"
+      ></image>
+      <view class="action f-ov">
+        <view class="action-play">
+          <view wx:if="{{pulling}}" class="action-play-btn">
+            <image src="/image/detail-img/pause.png" class="action-play-img" bindtap="stop"></image>
+          </view> 
+          <view wx:else class="action-play-btn">
+            <image src="/image/detail-img/play.png" class="action-play-img" bindtap="play"></image>
+          </view>
+        </view>
+        <view class="action-param">
+          <view class="action-param-item {{muted ? '' : 'f-disable'}}" bindtap="switchMuted">
+            <image class="action-param-img" src="/image/detail-img/mute.png"></image>
+            <view>静音</view>
+          </view>
+          <view class="action-param-item {{objectFit === 'contain' ? '' : 'f-disable'}}" bindtap="swicthObjectFit">  
+            <image class="action-param-img" src="/image/detail-img/adapt.png"></image>
+            <view>{{objectFit === 'contain' ? '适应' : '填充'}}</view>
+          </view>
+          <view class="action-param-item {{orientation === 'vertical' ? 'f-disable' : ''}}" bindtap="switchOrientation">
+            <image class="action-param-img" src="/image/detail-img/anyway.png"></image>
+            <view>{{orientation === 'vertical' ? '竖屏' : '横屏'}}</view>
+          </view>
+        </view>
+      </view>
+    </live-player>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+.technology-container {
+  height: 100%;
+  width: 100%;
+}
+
+.technology-text {
+  text-align:center;
+  
+}

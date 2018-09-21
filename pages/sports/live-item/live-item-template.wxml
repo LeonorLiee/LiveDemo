@@ -1,0 +1,10 @@
+<template name="liveItem">
+  <view class='post-container'>
+    <image class='post-image' mode="aspectFill" src='{{importantImgSrc}}'></image>
+    <text class='post-content'>{{title}}</text>
+    <view class='post-like'>
+      <image class='post-like-image' src='/image/icon/view.png'></image>
+      <text class='post-like-font'>{{watchNum}}</text>
+    </view>
+  </view>
+</template>
